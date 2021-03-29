@@ -25,7 +25,7 @@ const chainMaker = {
     }
     chainMaker.link[position - 1] = undefined;
     return chainMaker;
-  }
+  },
   reverseChain() {
     chainMaker.link = chainMaker.link.reverse();
     return chainMaker;
@@ -37,11 +37,10 @@ const chainMaker = {
 
     let result = "";
     clearChain.forEach(function (element) {
-      result = result + "( " + element + " )~~";
+      result += "( " + element + " )~~";
     });
     chainMaker.link = [];
     return result.slice(0,-2);
   }
 };
-
 module.exports = chainMaker;
